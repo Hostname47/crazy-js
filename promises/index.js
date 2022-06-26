@@ -1,3 +1,5 @@
+'use strict';
+
 let mywebsite = fetch('https://api.github.com/users/Hoshhtname47/repos');
 
 let res = mywebsite.then((response) => {
@@ -23,7 +25,7 @@ Promise.all([promise1, promise2])
                 // console.log(data);
             });
     }).catch((message) => {
-        console.log(message);
+        // console.log(message);
     })
 
 // Fulfilled if one of the passed promises get fulfilled (rejected if all promises rejected)
@@ -34,7 +36,7 @@ Promise.any([promise1, promise2])
                 // console.log(data);
             });
     }).catch((message) => {
-        console.log(message);
+        // console.log(message);
     });
 
 // async-await
@@ -105,3 +107,50 @@ window.onload = () => {
             })
     });
 }
+
+let promise = new Promise((resolve, reject) => {
+    reject('re-rejected');
+});
+
+setTimeout(() => {
+    promise.then(() => {
+
+    }).catch(() => {
+        
+    });
+}, 10);
+
+addEventListener('unhandledrejection', event => {
+    // console.log('unhandled rejection for the following reason : ' + event.reason);
+});
+
+addEventListener('rejectionhandled', event => {
+    // console.log('rejection handled');
+});
+
+new Promise((resolve, reject) => {
+    resolve('success');
+}).then((message) => {
+    // console.log('resolved with message : ' + message);
+
+    // throw new Error('hello world');
+}).catch((error) => {
+    // console.log("let's catch this error");
+}).then(() => {
+    // console.log('then after catch will be executed no matter what happened before');
+});
+
+function wait(delay) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, delay);
+    });
+}
+
+wait(2000).then(() => {
+    // console.log('this code will be run after timer finished as a replacement of the callback passed manually');
+});
+
+Promise.reject('just rejected')
+    .catch((error) => {
+        console.log(error);
+    });
