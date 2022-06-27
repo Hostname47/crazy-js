@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz#1</title>
+    <link rel="stylesheet" href="../index.css">
+    <script src="index.js" defer></script>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <style>
+        #app {
+            width: 540px;
+            padding: 20px 60px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            margin: 0 auto;
+        }
+
+        #guess-button {
+            margin-left: 10px;
+        }
+
+        #last-guess-rightness {
+            color: white;
+            padding: 4px 6px;
+            border-radius: 3px;
+        }
+        
+        .green-background {
+            background-color: rgb(73, 189, 73);
+        }
+
+        .red-background {
+            background-color: rgb(226, 86, 86);
+        }
+
+        .none {
+            display: none;
+        }
+
+        .opacity0 {
+            opacity: 0;
+        }
+    </style>
+    <div id="app">
+        <h1 class="full-center">Guess the number quizz</h1>
+        <p class="">We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+        <div class="align-center">
+            <label for="number-to-guess">
+                <span>Enter your guess :</span>
+                <input type="text" id="guess-input" autocomplete="off">
+            </label>
+            <button id="guess-button">guess</button>
+        </div>
+        
+        <div id="result-box" class="opacity0">
+            <p>Previous guesses : <span id="previous-guesses"></span></p>
+            <p id="last-guess-rightness" class="red-background" style="color: white;">WRONG!!</p>
+            <p id="last-guess-balance-result">Last guess was too high</p>
+        </div>
+        <button id="restart-game" class="none">Start game again</button>
+    </div>
+
+</body>
+</html>
