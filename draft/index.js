@@ -1,5 +1,11 @@
 localStorage.setItem('foo', 'Mouad Nassri');
+let fooInput = document.getElementById('foo');
 
-let value = prompt('hello world');
+let username = 'hostname47';
+console.log(username[0]);
 
-console.log(value);
+let names = ['mouad', 'thomas', 'john', 'stalin'];
+
+names = names.filter(uname => uname.length > 4);
+
+console.log(names);

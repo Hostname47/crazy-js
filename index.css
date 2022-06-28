@@ -12,3 +12,7 @@
     display: flex;
     align-items: center;
 }
+
+.my12 {
+    margin: 12px 0;
+}

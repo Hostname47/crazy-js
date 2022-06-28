@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="../index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <h1 class="full-center">Events in javascript</h1>
+
+    <p>The following button will change the title for 2 sendonds and then restore it back to the original. (other stuff could happen)</p>
+    <button id="show-message">show message</button>
+    <div class="my12">
+        <button id="boo">boo</button>
+    </div>
+    <div style="margin: 14px 0; display: flex; gap: 6px;">
+        <button id="attach-ev">attach</button>
+        <button id="event-toggle-button">button</button>
+        <button id="detach-ev">detach</button>
+    </div>
+
+    <div class="my12">
+        <h2>Bubbling and capturing</h2>
+        
+        <div id="b-and-c-box">
+            <button id="bubbling-click">bubbling - click</button>
+            <button id="capturing-click">capturing - click</button>
+
+            <style>
+                #blue {
+                    background-color: #0066ff;
+                    width: 280px;
+                    height: 180px;
+                }
+                #green {
+                    background-color: #008000;
+                    width: 240px;
+                    height: 140px;
+                }
+                #red {
+                    background-color: #ff0000;
+                    width: 200px;
+                    height: 100px;
+                }
+                #ed-container {
+                    margin: 16px 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 4px;
+                }
+                .ed-item {
+                    background-color: ghostwhite;
+                    border: 1px solid rgb(197, 197, 197);
+                    border-radius: 3px;
+                    padding: 12px;
+                }
+            </style>
+            <div id="blue" class="full-center">
+                <div id="green" class="full-center">
+                    <div id="red" class="full-center">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- event delegation -->
+            <div id="ed-container">
+                <div class="ed-item">1</div>
+                <div class="ed-item">2</div>
+                <div class="ed-item">3</div>
+                <div class="ed-item">4</div>
+                <div class="ed-item">5</div>
+                <div class="ed-item">6</div>
+                <div class="ed-item">7</div>
+                <div class="ed-item">8</div>
+                <div class="ed-item">9</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
