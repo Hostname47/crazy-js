@@ -41,11 +41,33 @@ function callback_hell() {
 
 callback_hell();
 
-/**
- * When we call callbacks inside callbacks and we get this pyramid shape,
- * that is callbacK hell, and it gets harder to debug, maintain or handle
- * errors.
- * For these reasons, most modern asynchronous APIs don't use callbacks. 
- * Instead, they use promises, and that's what I need to learn next.
- * 
- */
+async function hello() {
+    let response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+    return response;
+}
+
+console.log('before async');
+hello()
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    });
+console.log('right after async');
+
+function alarm(name, delay) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(`Wake up, ${name}`);
+        }, delay);
+    });
+}
+
+async function usingAlarm() {
+    let message = await alarm('Mouad', 2000);
+    console.log(message);
+}
+
+usingAlarm();
