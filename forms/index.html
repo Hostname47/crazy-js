@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <h1 class="full-center">Forms</h1>
+    
+    <form action="/contact" method="post">
+        <ul>
+            <li>
+                <label for="firstname">Firstname</label>
+                <input type="text" id="firstname" name="user-firstname">
+            </li>
+            <li>
+                <label for="lastname">Lastname</label>
+                <input type="text" id="lastname" name="user-lastname">
+            </li>
+            <li>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="user-email">
+            </li>
+            <li>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10">Put yout message here</textarea>
+            </li>
+            <li class="button">
+                <button type="submit">Send your message</button>
+            </li>
+        </ul>
+    </form>
+
+    <div class="my12"></div>
+
+    <form action="">
+        <fieldset>
+            <legend>Legend title</legend>
+            <ul>
+                <li>
+                    <label for="report">Report</label>
+                    <textarea name="report" id="report" cols="30" rows="10"></textarea>
+                </li>
+                <li>
+                    <label for="size">type</label>
+                    <input type="text" id="size" autofocus size="2" maxlength="2">
+                </li>
+                <li>
+                    <label for="img">image input</label>
+                    <input id="img" type="image" alt="Click me!" src="mic.jpeg" width="80" height="30">
+                </li>
+                <li>
+                    <label for="file">select an image</label>
+                    <input id="file" type="file" accept="image/*" multiple>
+                </li>
+
+                <li>
+                    <p>Please select correct answer :</p>
+                    
+                    <div class="align-center">
+                        <input type="checkbox" name="answer" id="answer-1">
+                        <label for="answer-1">answer 1</label>
+                    </div>
+                    <div class="align-center">
+                        <input type="checkbox" name="answer" id="answer-2">
+                        <label for="answer-2">answer 2</label>
+                    </div>
+                    <div class="align-center">
+                        <input type="checkbox" name="answer" id="answer-3">
+                        <label for="answer-3">answer 3</label>
+                    </div>
+                </li>
+
+                <li>
+                    <p>Please select correct answer :</p>
+                    
+                    <div class="align-center">
+                        <input type="radio" name="ranswer" id="ranswer-1">
+                        <label for="answer-1">answer 1</label>
+                    </div>
+                    <div class="align-center">
+                        <input type="radio" name="ranswer" id="ranswer-2">
+                        <label for="answer-2">answer 2</label>
+                    </div>
+                    <div class="align-center">
+                        <input type="radio" name="ranswer" id="ranswer-3">
+                        <label for="answer-3">answer 3</label>
+                    </div>
+                </li>
+
+                <li>
+                    <label for="search">Search for something</label>
+                    <input id="search" type="search">
+                </li>
+
+                <li>
+                    <label for="numrc">Number</label>
+                    <input id="numrc" type="number" min="0" max="100" step="0.2">
+                </li>
+
+                <li>
+                    <label for="numrc">Choose the minimum house price</label>
+                    <input type="range" id="min-price" name="min-price" min="1000" max="200000" step="1000" value="100000">
+                    <output class="price-output" for="min-price"></output>
+                </li>
+
+                <li>
+                    <input type="week" id="week-input" name="week">
+                    <input type="color">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </li>
+
+                <li>
+                    <select name="" id="" size="2">
+                        <option value="a">a</option>
+                        <option value="b" selected>b</option>
+                        <option value="c" selected>c</option>
+                    </select>
+                </li>
+
+                <li>
+                    <label for="myFruit">What's your favorite fruit?</label>
+                    <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+                    <datalist id="mySuggestion">
+                    <option>Apple</option>
+                    <option>Banana</option>
+                    <option>Blackberry</option>
+                    <option>Blueberry</option>
+                    <option>Lemon</option>
+                    <option>Lychee</option>
+                    <option>Peach</option>
+                    <option>Pear</option>
+                    </datalist>
+                </li>
+
+                <li>
+                    <meter min="0" max="100" value="100" low="33" high="66" optimum="100">75</meter>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
