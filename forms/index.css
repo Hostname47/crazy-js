@@ -63,4 +63,8 @@ form {
        between the labels and their text fields */
     margin-left: .5em;
   }
-  
+
+.error {
+	display: none;
+	color: rgb(255, 58, 58);
+}
